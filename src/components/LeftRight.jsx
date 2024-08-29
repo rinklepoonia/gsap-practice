@@ -13,7 +13,7 @@ function LeftRight() {
         start: "top top",
         end: "bottom top",
         animation: imageAnimation,
-        markers: true,
+        markers: false,
         pin: true,
         scrub: true,
         // toggleActions: "play",
@@ -42,7 +42,7 @@ function LeftRight() {
   });
 
   return (
-    <div className="py-[200px] main_box1 min-h-screen flex items-center">
+    <div className="main_box1 min-h-screen flex items-center">
       <div className="container">
         <div className="flex flex-wrap justify-between items-center">
           <div className=" flex-col flex gap-5">

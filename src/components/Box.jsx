@@ -8,11 +8,11 @@ export const Box = () => {
     let tx = gsap.context(() => {
       let zoomBox = gsap.timeline();
       ScrollTrigger.create({
-        trigger: ".main_box",
-        start: "100% 70%",
-        end: "30% 20%",
+        trigger: ".main_box_box",
+        start: "-100% 70%",
+        end: "30% 50%",
         animation: zoomBox,
-        markers: false,
+        markers: true,
         toggleActions: "play",
       });
       zoomBox.fromTo(
@@ -22,8 +22,6 @@ export const Box = () => {
         },
         {
           scale: 1,
-          duration: 0.9,
-          delay: 0.5,
         }
       );
       zoomBox.fromTo(
@@ -51,7 +49,7 @@ export const Box = () => {
     return () => tx.revert();
   }, []);
   return (
-    <div className="main_box">
+    <div className="main_box_box">
       <div className="container">
         <div className="flex justify-center">
           <div class="bg-[linear-gradient(91deg,#5F21E9_60%,#FA00FF_103%)] rounded-[17px] translate-y-[30%] max-w-[1024px] box">
