@@ -2,21 +2,22 @@ import React, { useEffect, useLayoutEffect } from "react";
 import monkeyImg from "../assets/image/png/monkey.jpg";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 function LeftRight() {
+  gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
     const tx = gsap.context(() => {
       let imageAnimation = gsap.timeline();
       ScrollTrigger.create({
-        trigger: ".main_box",
-        start: "40% 20%",
-        end: "10% 50%",
+        trigger: ".main_box1",
+        start: "top top",
+        end: "bottom top",
         animation: imageAnimation,
-        markers: false,
+        markers: true,
         pin: true,
-        // scrub: true,
-        toggleActions: "play",
+        scrub: true,
+        // toggleActions: "play",
+        // pinSpacing: false,
       });
       imageAnimation.fromTo(
         ".imgGsap",
@@ -41,7 +42,7 @@ function LeftRight() {
   });
 
   return (
-    <div className="pt-[200px] pb-[200px] main_box">
+    <div className="py-[200px] main_box1 min-h-screen flex items-center">
       <div className="container">
         <div className="flex flex-wrap justify-between items-center">
           <div className=" flex-col flex gap-5">
@@ -50,7 +51,7 @@ function LeftRight() {
             </p>
             <p className="text-black text-2xl font-medium scrollGsap">
               GSAP is "framework agnostic"
-            </p>
+            </p>  
             <p className="text-black text-2xl font-medium scrollGsap">
               GSAP is "framework agnostic"
             </p>
