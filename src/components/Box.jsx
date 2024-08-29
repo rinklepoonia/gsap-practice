@@ -9,7 +9,7 @@ export const Box = () => {
       let zoomBox = gsap.timeline();
       ScrollTrigger.create({
         trigger: ".main_box",
-        start: "120% 30%",
+        start: "100% 70%",
         end: "30% 20%",
         animation: zoomBox,
         markers: false,
@@ -33,7 +33,7 @@ export const Box = () => {
         },
         {
           scale: 1,
-          duration: 0.2,
+          duration: 0.1,
         }
       );
       zoomBox.fromTo(
