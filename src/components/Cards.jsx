@@ -10,9 +10,9 @@ function Cards() {
       ScrollTrigger.create({
         trigger: ".main_box",
         start: "1% 50%",
-        end: "30%  10%",
+        end: "10%  10%",
         animation: cardAnimation,
-        markers: false,
+        markers: true,
         toggleActions: "play",
       });
       cardAnimation.fromTo(
@@ -24,6 +24,7 @@ function Cards() {
         {
           y: 0,
           opacity: 1,
+          duration: 0.3,
         }
       );
       cardAnimation.fromTo(
@@ -35,6 +36,7 @@ function Cards() {
         {
           y: 0,
           opacity: 1,
+          duration: 0.3,
         }
       );
       cardAnimation.fromTo(
@@ -46,12 +48,13 @@ function Cards() {
         {
           y: 0,
           opacity: 1,
+          duration: 0.3,
         }
       );
       cardAnimation.fromTo(
         ".card_animation",
         { x: -1920 },
-        { x: 0, stagger: 0.3 }
+        { x: 0, stagger: 0.2 }
       );
     });
     return () => ctx.revert();

@@ -12,7 +12,7 @@ export const Box = () => {
         start: "-100% 70%",
         end: "30% 50%",
         animation: zoomBox,
-        markers: true,
+        markers:false,
         toggleActions: "play",
       });
       zoomBox.fromTo(
