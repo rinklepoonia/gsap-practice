@@ -24,8 +24,7 @@ function Hero() {
       },
       {
         x: 0,
-        duration: 0.5,
-        delay: 0.2,
+        duration: 0.2,
         opacity: 1,
       }
     );
@@ -39,7 +38,6 @@ function Hero() {
         x: 0,
         duration: 0.1,
         stagger: 0.3,
-        delay: 0.2,
         opacity: 1,
       }
     );
@@ -53,7 +51,6 @@ function Hero() {
         x: 0,
         duration: 0.9,
         stagger: 0.3,
-        delay: 0.2,
         opacity: 1,
       }
     );
